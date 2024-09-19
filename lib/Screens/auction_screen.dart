@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nft_concept_ui_kit/Screens/auction_single_screen.dart';
 
 class AuctionScreen extends StatefulWidget {
   const AuctionScreen({super.key});
@@ -24,12 +25,17 @@ class _AuctionScreenState extends State<AuctionScreen> {
             width: MediaQuery.of(context).size.width,
             child: Stack(
               children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: SvgPicture.asset(
-                    "assets/images/svg/back.svg",
-                    height: 20.0,
-                    width: 20.0,
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: SvgPicture.asset(
+                      "assets/images/svg/back.svg",
+                      height: 20.0,
+                      width: 20.0,
+                    ),
                   ),
                 ),
                 const Align(
@@ -65,42 +71,47 @@ class _AuctionScreenState extends State<AuctionScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Image.asset("assets/images/png/logo.png", width: 50.0, fit: BoxFit.fill,),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 16.0),
-                        child: Column(
-                          children: [
-                            const Row(
-                              children: [
-                                Text("Axuki #5329", style: TextStyle(
-                                  fontSize: 15.0,
-                                  color: Colors.black,
-                                  fontFamily: "poppinsSemiBold",
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const AuctionSingleScreen()));
+                  },
+                  child: Row(
+                    children: [
+                      Image.asset("assets/images/png/logo.png", width: 50.0, fit: BoxFit.fill,),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 16.0),
+                          child: Column(
+                            children: [
+                              const Row(
+                                children: [
+                                  Text("Axuki #5329", style: TextStyle(
+                                    fontSize: 15.0,
+                                    color: Colors.black,
+                                    fontFamily: "poppinsSemiBold",
 
-                                ),),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                const Text("@TeamAzuki", style: TextStyle(
-                                  fontSize: 12.0,
-                                  color: Colors.black,
-                                  fontFamily: "poppinsMedium",
+                                  ),),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  const Text("@TeamAzuki", style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.black,
+                                    fontFamily: "poppinsMedium",
 
-                                ),),
-                                const SizedBox(width: 4.0,),
-                                Image.asset("assets/images/png/tick_icon.png", height: 18.0,width: 18.0, fit: BoxFit.fill,),
-                              ],
-                            )
-                          ],
+                                  ),),
+                                  const SizedBox(width: 4.0,),
+                                  Image.asset("assets/images/png/tick_icon.png", height: 18.0,width: 18.0, fit: BoxFit.fill,),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
                 const Icon(
                   Icons.more_vert
