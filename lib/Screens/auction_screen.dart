@@ -26,7 +26,7 @@ class _AuctionScreenState extends State<AuctionScreen> {
             child: Stack(
               children: [
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
                   },
                   child: Align(
@@ -39,11 +39,13 @@ class _AuctionScreenState extends State<AuctionScreen> {
                   ),
                 ),
                 const Align(
-                  child: Text("Auction", style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "poppinsSemiBold",
-                    fontSize: 16.0
-                  ),),
+                  child: Text(
+                    "Auction",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "poppinsSemiBold",
+                        fontSize: 16.0),
+                  ),
                 )
               ],
             ),
@@ -56,28 +58,39 @@ class _AuctionScreenState extends State<AuctionScreen> {
             child: Container(
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                border: Border.all(width: 3.0, color: Colors.black),
-                borderRadius: const BorderRadius.all(Radius.circular(12.0)),
-                color: Colors.transparent
-              ),
+                  border: Border.all(width: 3.0, color: Colors.black),
+                  borderRadius: const BorderRadius.all(Radius.circular(12.0)),
+                  color: Colors.transparent),
               child: Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: Image.asset("assets/images/jpg/user_one.jpg", fit: BoxFit.fill,)),
+                  child: Image.asset(
+                    "assets/images/jpg/user_one.jpg",
+                    fit: BoxFit.fill,
+                  )),
             ),
           ),
-          const SizedBox(height: 18.0,),
+          const SizedBox(
+            height: 18.0,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 24.0, right: 24.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const AuctionSingleScreen()));
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AuctionSingleScreen()));
                   },
                   child: Row(
                     children: [
-                      Image.asset("assets/images/png/logo.png", width: 50.0, fit: BoxFit.fill,),
+                      Image.asset(
+                        "assets/images/png/logo.png",
+                        width: 50.0,
+                        fit: BoxFit.fill,
+                      ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: Padding(
@@ -86,24 +99,35 @@ class _AuctionScreenState extends State<AuctionScreen> {
                             children: [
                               const Row(
                                 children: [
-                                  Text("Axuki #5329", style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                    fontFamily: "poppinsSemiBold",
-
-                                  ),),
+                                  Text(
+                                    "Axuki #5329",
+                                    style: TextStyle(
+                                      fontSize: 15.0,
+                                      color: Colors.black,
+                                      fontFamily: "poppinsSemiBold",
+                                    ),
+                                  ),
                                 ],
                               ),
                               Row(
                                 children: [
-                                  const Text("@TeamAzuki", style: TextStyle(
-                                    fontSize: 12.0,
-                                    color: Colors.black,
-                                    fontFamily: "poppinsMedium",
-
-                                  ),),
-                                  const SizedBox(width: 4.0,),
-                                  Image.asset("assets/images/png/tick_icon.png", height: 18.0,width: 18.0, fit: BoxFit.fill,),
+                                  const Text(
+                                    "@TeamAzuki",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.black,
+                                      fontFamily: "poppinsMedium",
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 4.0,
+                                  ),
+                                  Image.asset(
+                                    "assets/images/png/tick_icon.png",
+                                    height: 18.0,
+                                    width: 18.0,
+                                    fit: BoxFit.fill,
+                                  ),
                                 ],
                               )
                             ],
@@ -113,19 +137,19 @@ class _AuctionScreenState extends State<AuctionScreen> {
                     ],
                   ),
                 ),
-                const Icon(
-                  Icons.more_vert
-                )
+                const Icon(Icons.more_vert)
               ],
             ),
           ),
-          const SizedBox(height: 18.0,),
+          const SizedBox(
+            height: 18.0,
+          ),
           Padding(
               padding: const EdgeInsets.only(left: 24.0, right: 24.0),
               child: RichText(
                 text: const TextSpan(
                   text:
-                  'Azuki starts with a collection of 10,000 avatars that give you membership access to The Garden: a corner of the internet ... ',
+                      'Azuki starts with a collection of 10,000 avatars that give you membership access to The Garden: a corner of the internet ... ',
                   style: TextStyle(
                       color: Color(0xFF606060),
                       fontSize: 14,
@@ -141,7 +165,9 @@ class _AuctionScreenState extends State<AuctionScreen> {
                   ],
                 ),
               )),
-          const SizedBox(height: 52.0,),
+          const SizedBox(
+            height: 52.0,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 24.0, right: 24.0),
             child: Row(
@@ -151,30 +177,45 @@ class _AuctionScreenState extends State<AuctionScreen> {
                   height: 54.0,
                   width: 100.0,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                    border: Border.all(width: 1.5, color: Colors.black),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        offset: Offset(
-                          1.8, 1.8
-                        ),
-                        blurRadius: 0.0, spreadRadius: 0.0
-                      )
-                    ]
-                  ),
+                      color: Colors.white,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(8.0)),
+                      border: Border.all(width: 1.5, color: Colors.black),
+                      boxShadow: const [
+                        BoxShadow(
+                            color: Colors.black,
+                            offset: Offset(1.8, 1.8),
+                            blurRadius: 0.0,
+                            spreadRadius: 0.0)
+                      ]),
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Last bid", style: TextStyle(fontFamily: "poppinsRegular", fontSize: 12.0, color: Color(0xFF5C5C5C)),),
+                        const Text(
+                          "Last bid",
+                          style: TextStyle(
+                              fontFamily: "poppinsRegular",
+                              fontSize: 12.0,
+                              color: Color(0xFF5C5C5C)),
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset("assets/images/png/etrium_icon.png", height: 28.0,),
-                            const SizedBox(width: 5.0,),
-                            const Text("9.09", style: TextStyle(fontFamily: "poppinsSemiBold", fontSize: 14.0, color: Color(0xFF5C5C5C)),),
+                            Image.asset(
+                              "assets/images/png/etrium_icon.png",
+                              height: 28.0,
+                            ),
+                            const SizedBox(
+                              width: 5.0,
+                            ),
+                            const Text(
+                              "9.09",
+                              style: TextStyle(
+                                  fontFamily: "poppinsSemiBold",
+                                  fontSize: 14.0,
+                                  color: Color(0xFF5C5C5C)),
+                            ),
                           ],
                         )
                       ],
@@ -185,29 +226,31 @@ class _AuctionScreenState extends State<AuctionScreen> {
                   height: 54.0,
                   width: MediaQuery.of(context).size.width - 100 - 48 - 8,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                    border: Border.all(width: 1.5, color: Colors.black),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        offset: Offset(
-                          1.8, 1.8
-                        ),
-                        blurRadius: 0.0, spreadRadius: 0.0
-                      )
-                    ]
-                  ),
+                      color: Colors.white,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(8.0)),
+                      border: Border.all(width: 1.5, color: Colors.black),
+                      boxShadow: const [
+                        BoxShadow(
+                            color: Colors.black,
+                            offset: Offset(1.8, 1.8),
+                            blurRadius: 0.0,
+                            spreadRadius: 0.0)
+                      ]),
                   child: const Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Audition ending in", style: TextStyle(fontFamily: "poppinsRegular", fontSize: 12.0, color: Color(0xFF5C5C5C)),),
+                        Text(
+                          "Audition ending in",
+                          style: TextStyle(
+                              fontFamily: "poppinsRegular",
+                              fontSize: 12.0,
+                              color: Color(0xFF5C5C5C)),
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            CountdownTimer()
-                          ],
+                          children: [CountdownTimer()],
                         )
                       ],
                     ),
@@ -216,7 +259,9 @@ class _AuctionScreenState extends State<AuctionScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 52.0,),
+          const SizedBox(
+            height: 52.0,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 24.0, right: 24.0),
             child: Container(
@@ -229,18 +274,21 @@ class _AuctionScreenState extends State<AuctionScreen> {
                   boxShadow: const [
                     BoxShadow(
                         color: Colors.black,
-                        offset: Offset(
-                            1.8, 1.8
-                        ),
-                        blurRadius: 0.0, spreadRadius: 0.0
-                    )
-                  ]
-              ),
+                        offset: Offset(1.8, 1.8),
+                        blurRadius: 0.0,
+                        spreadRadius: 0.0)
+                  ]),
               child: const Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Place Bid", style: TextStyle(fontFamily: "poppinsSemiBold", fontSize: 14.0, color: Colors.black),),
+                    Text(
+                      "Place Bid",
+                      style: TextStyle(
+                          fontFamily: "poppinsSemiBold",
+                          fontSize: 14.0,
+                          color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -251,7 +299,6 @@ class _AuctionScreenState extends State<AuctionScreen> {
     );
   }
 }
-
 
 class CountdownTimer extends StatefulWidget {
   const CountdownTimer({super.key});
@@ -308,7 +355,10 @@ class _CountdownTimerState extends State<CountdownTimer> {
       children: [
         Text(
           formatDuration(duration),
-          style: const TextStyle(fontFamily: "poppinsSemiBold", fontSize: 14.0, color: Color(0xFF5C5C5C)),
+          style: const TextStyle(
+              fontFamily: "poppinsSemiBold",
+              fontSize: 14.0,
+              color: Color(0xFF5C5C5C)),
         ),
       ],
     );
